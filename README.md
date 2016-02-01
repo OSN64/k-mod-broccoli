@@ -37,4 +37,4 @@ NOTES
 ==
 
 1. Make sure kernel headers are install before running
-2. Unlink pathname can be an absolute or relative path
+2. Unlink and UnlinkAt pathname can be an absolute or relative path

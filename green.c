@@ -31,7 +31,6 @@ asmlinkage long new_sys_unlinkat(int dfd, const char __user * pathname, int flag
 	}
 	ret = ref_sys_unlinkat(dfd, pathname, flag);
 
-	// printk(KERN_INFO "intercept unlink: 0x%02X", pathname[0]);
 	printk(KERN_INFO "Intercept unlinkAt: %s", pathname);
 
 	return ret;
@@ -81,7 +80,7 @@ static int __init hello_init(void)
 	// enable page protection
 	ENABLE_PAGE_PROTECTION;
 
-    return 0;    // Non-zero return means that the module couldn't be loaded.
+    return 0;
 }
 
 static void __exit hello_cleanup(void)
